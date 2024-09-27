@@ -37,7 +37,7 @@ const todoList = () => {
         for(let i = 0; i < list.length; i++){
             if(list[i].dueDate == today){
                 if(list[i].completed == true){
-                    display += `[x] ${list[i].title}\n`
+                    display += `[x] ${list[i].title}`
                 }
                 else{
                     display += `[ ] ${list[i].title}`
@@ -45,11 +45,14 @@ const todoList = () => {
             }
             else{
                 if(list[i].completed == true){
-                    display += `[x] ${list[i].title} ${list[i].dueDate}\n`
+                    display += `[x] ${list[i].title} ${list[i].dueDate}`
                 }
                 else{
-                    display += `[ ] ${list[i].title} ${list[i].dueDate}\n`
+                    display += `[ ] ${list[i].title} ${list[i].dueDate}`
                 }
+            }
+            if(i < list.length - 1) {
+                display += "\n";
             }
         }
         return display;
